@@ -39,30 +39,14 @@ class DataController{
 app.use(express.json())
 app.use('/api', router)
 
-app.get('/hw', (req, res)=>{
-  res.status(200).json({message:'hello world'})
-})
+
 
 app.get('/', (req, res)=>{
   res.status(200).json({message:'juriev 11-ES322'})
 })
 
 
-  app.post('/CreateTodo', (req, res) => {
-      const { id, title, description, isDone } = req.body
-      const type = Todo.create({
-        id, title, description, isDone
-      });
-      return res.json(type);
-  }) 
-  
-app.delete('/deleteToDoWhere', (req, res) => {
-  const { id, title, description, isDone } = req.body
-  let Delete_ID = Number(req.params.Delete_ID)
-  const type = User.destroy({ where: { id: Delete_ID } });
-  res.send("!")
-})
-
+ 
 
 const start = async () => {
   try{   
