@@ -4,7 +4,7 @@ const sequelize = require('./db')
 const models = require('./models/models')
 const CryptoJS = require('crypto-js')
 const cors = require('cors')
-const PORT = process.env.PORT || 3100
+const PORT = process.env.PORT || 8080
 const app = express()
 const router = require('./routes/index')
 
